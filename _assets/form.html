@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link href="./main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="form__wrapper">
+      <form action="#" method="POST" class="form">
+        <div class="form__group">
+          <label class="form__label" for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form__input"
+            required
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label">Email</label>
+          <input type="email" name="email" class="form__input" required />
+        </div>
+        <div class="form__group">
+          <label class="form__label">Phone</label>
+          <input type="tel" name="phone" class="form__input" required />
+        </div>
+        <div class="form__group">
+          <label class="form__label">Address</label>
+          <textarea name="address" class="form__textarea" required></textarea>
+        </div>
+        <div class="form__group">
+          <button type="submit" class="form__button">Save item</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

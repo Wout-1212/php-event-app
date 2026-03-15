@@ -1,0 +1,15 @@
+{
+  "name": "2webdevbasics-examen-boilerplate",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "laravel-vite-plugin": "^1.0",
+    "sass": "^1.86.0",
+    "vite": "^6.0"
+  }
+}

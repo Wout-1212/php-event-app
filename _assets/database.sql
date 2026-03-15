@@ -1,0 +1,27 @@
+CREATE DATABASE 2_webdevbasics_examen_p3;
+USE 2_webdevbasics_examen_p3;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NULL,
+    password VARCHAR(255) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+INSERT INTO users (email, password) VALUES ('test@test.be', '$2y$10$YYWm.1dpCKz9TtNSy5FCuOjb5OoTHvKihYxtpk8b3Aylr2Cy8d01.');
+
+CREATE TABLE events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
