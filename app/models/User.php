@@ -12,11 +12,5 @@ class User extends BaseModel
      * If you are using a non-static function you can use
      * $this->db->query(...); (db is connected in the BaseModel)
      */
-    public static function all()
-    {
-        $instance = new static();
-
-        $stmt = $instance->db->query('SELECT * FROM users');
-        return $stmt->fetchAll();
-    }
+    protected string $tableName = 'users';
 }

@@ -2,17 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Models\User;
+use App\Models\Event;
 use App\Controllers\BaseController;
 
 class HomeController extends BaseController
 {
     public function index()
     {
-        $users = User::all();
+        $events = Event::all();
 
         view('home', [
-            'users'=> $users
+            'events'=> $events
         ]);
     }
 

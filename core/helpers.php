@@ -1,5 +1,6 @@
 <?php
 
+/*
 function dd($data)
 {
     if (empty($data)) {
@@ -12,6 +13,7 @@ function dd($data)
 
     die();
 }
+*/
 
 function view($view, $data = [])
 {

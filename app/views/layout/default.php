@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
     <?php vite(['theme/main.scss']); ?>
 </head>
+
 <body>
 
-    <?= $content; ?>
+    <div class="layout__sidebar layout__sidebar--visible">
+        <h2 class="layout__sidebar-title">Items list</h2>
+        <nav class="layout__nav">
+            <a href="/" class="layout__nav-link">Home</a>
+            <a href="/logout" class="layout__nav-link">Logout</a>
+        </nav>
+    </div>
+
+    <div class="layout__content">
+        <header class="layout__header">
+            <h1 class="layout__header-title">My Items</h1>
+            <a href="/add" class="layout__add-button">Add New</a>
+        </header>
+
+        <?= $content; ?>
+    </div>
 
     <?php vite(['theme/main.js']); ?>
 </body>
+
 </html>
