@@ -15,6 +15,19 @@ function dd($data)
 }
 */
 
+function get($key)
+{
+    if (!empty($_GET[$key])) {
+        return $_GET[$key];
+    }
+
+    if (!empty($_POST[$key])) {
+        return $_POST[$key];
+    }
+
+    return null;
+}
+
 function view($view, $data = [])
 {
     extract($data);

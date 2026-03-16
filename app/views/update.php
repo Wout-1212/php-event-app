@@ -1,4 +1,4 @@
-<?php Core\Core::header('Update Event'); ?>
+<?php Core\Core::header(); ?>
 
 <div class="">
     <?php snippet('eventForm', $event); ?>
