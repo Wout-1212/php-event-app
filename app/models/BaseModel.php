@@ -169,4 +169,17 @@ class BaseModel
         return $stmt->fetchObject(static::class);
     }
 
+    public static function lastFive(bool $withTrashed = false)
+{
+    $instance = new static();
+
+    if ($withTrashed) {
+        $stmt = $instance->db->query("SELECT * FROM {$instance->tableName} ORDER BY created_at DESC LIMIT 5");
+    } else {
+        $stmt = $instance->db->query("SELECT * FROM {$instance->tableName} WHERE deleted_at IS NULL ORDER BY created_at DESC LIMIT 5");
+    }
+
+    return $stmt->fetchAll(PDO::FETCH_CLASS, static::class);
+}
+
 }

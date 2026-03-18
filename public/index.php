@@ -22,10 +22,13 @@ $router->add('login', 'LoginController', 'showLoginForm');
 $router->add('authenticate', 'LoginController', 'authenticate');
 $router->add('logout', 'LoginController', 'logout');
 
+$router->add('admin', 'AdminController', 'index');
 $router->add('add', 'AddController', 'showAddForm');
-
 $router->add('update/{id}', 'UpdateController', 'showUpdateForm');
-$router->add('save/{id?}', 'Savecontroller', 'save');
+$router->add('save/{id?}', 'SaveController', 'save');
+$router->add('delete/{id}', 'DeleteController', 'delete');
+
+
 
 $uri = trim($_SERVER['REQUEST_URI'], '/');
 $router->dispatch($uri);

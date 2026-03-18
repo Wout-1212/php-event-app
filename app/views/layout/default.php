@@ -21,7 +21,6 @@
     <div class="layout__content">
         <header class="layout__header">
             <h1 class="layout__header-title">My Items</h1>
-            <a href="/add" class="layout__add-button">Add New</a>
         </header>
 
         <?= $content; ?>

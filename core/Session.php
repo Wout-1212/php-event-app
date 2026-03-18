@@ -19,9 +19,16 @@ class Session
         return $_SESSION[$key] ?? $default;
     }
 
+    public static function getAndForget(string $key, mixed $default = null)
+    {
+        $value = $_SESSION[$key] ?? $default;
+        unset($_SESSION[$key]);
+
+        return $value;
+    }
+
     public static function destroy()
     {
         session_destroy();
     }
-
 }

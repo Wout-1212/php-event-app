@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: var(--transition-bg);
+  cursor: pointer;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+
+  &--update {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &--delete {
+    background-color: var(--color-error);
+    color: var(--color-white);
+    margin-left: 0.5rem;
+
+    &:hover {
+      background-color: var(--color-error-dark);
+    }
+  }
+}

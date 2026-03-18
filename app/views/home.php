@@ -14,7 +14,7 @@
 
     <div class="layout__content">
         <header class="layout__header">
-            <h1 class="layout__header-title">My latest 5 Events</h1>
+            <h1 class="layout__header-title">5 Latest Events</h1>
         </header>
 
         <div class="table__wrapper">

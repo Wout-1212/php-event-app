@@ -5,13 +5,13 @@ namespace App\Controllers;
 use App\Models\Event;
 use App\Controllers\BaseController;
 
-class HomeController extends BaseController
+class AdminController extends BaseController
 {
     public function index()
     {
-        $events = Event::lastFive();
+        $events = Event::all();
 
-        view('home', [
+        view('admin', [
             'events'=> $events
         ]);
     }
