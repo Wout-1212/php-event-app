@@ -7,6 +7,10 @@
 // als extra: gebruik CSS variabelen ipv Sass variabelen
 // als extra: maak gebruik van de BEM notatie
 
-body {
-    background: red;
-}
+@use "config";
+@use "reset";
+@use "layout/layout";
+@use "components/table";
+@use "components/message";
+@use "components/login";
+@use "components/form.scss";

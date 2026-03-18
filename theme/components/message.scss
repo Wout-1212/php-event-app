@@ -1,0 +1,11 @@
+.message {
+  background-color: var(--color-bg);
+  padding: 1.25rem 0;
+  color: var(--color-success);
+  text-align: center;
+ 
+  &--error {
+    color: var(--color-error);
+  }
+}
+ 

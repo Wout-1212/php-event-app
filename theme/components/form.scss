@@ -1,0 +1,47 @@
+.form {
+  &__wrapper {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+ 
+  &__label {
+    display: block;
+    color: var(--color-text-secondary);
+  }
+ 
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 0 2px transparent;
+    transition: box-shadow 0.2s;
+ 
+    &:focus {
+      box-shadow: 0 0 0 2px var(--color-focus-ring);
+      border-color: transparent;
+    }
+  }
+ 
+  &__button {
+    background-color: var(--color-primary-alt);
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-bg);
+ 
+    &:hover {
+      background-color: var(--color-primary-alt-dark);
+    }
+  }
+}
