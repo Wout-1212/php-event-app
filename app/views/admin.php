@@ -11,7 +11,7 @@
         <div class="layout__content">
             <header class="layout__header">
                 <h1 class="layout__header-title">All Events</h1>
-                <a href="/add" class="form__button">Add New</a>
+                <a href="/add" class="layout__add-button">Add New</a>
             </header>
             <div class="table__wrapper">
                 <table class="table">
