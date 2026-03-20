@@ -12,8 +12,13 @@
     <div class="layout__sidebar layout__sidebar--visible">
         <h2 class="layout__sidebar-title">Events</h2>
         <nav class="layout__nav">
-            <a href="/" class="layout__nav-link">Home</a>
-            <a href="/logout" class="layout__nav-link">Logout</a>
+            <?php if (Core\Session::get('user')): ?>
+                <a href="/" class="layout__nav-link">Home</a>
+                <a href="/admin" class="layout__nav-link">Admin</a>
+                <a href="/logout" class="layout__nav-link">Logout</a>
+            <?php else: ?>
+                <a href="/login" class="layout__nav-link">Login</a>
+            <?php endif; ?>
         </nav>
     </div>
 

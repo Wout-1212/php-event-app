@@ -9,7 +9,7 @@ class BaseController
 {
     public function __construct()
     {
-        //Auth::check();
+        Auth::check();
     }
 
 }

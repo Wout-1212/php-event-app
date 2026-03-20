@@ -22,7 +22,7 @@ class LoginController
 
         if ($user && password_verify($password, $user->password)) {
             Session::set('user', $user->id);
-            redirect('/');
+            redirect('/admin');
         }
 
         Session::set('error', 'Invalid credentials');
@@ -32,6 +32,6 @@ class LoginController
     public function Logout()
     {
         Session::destroy();
-        redirect('/login');
+        redirect('/');
     }
 }
