@@ -7,7 +7,7 @@
     <link href="./main.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="layout">
     <div class="form__wrapper">
       <form action="/save/<?=$event->id ?? null?>" method="POST" class="form">
         <div class="form__group">

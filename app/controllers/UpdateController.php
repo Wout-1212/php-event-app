@@ -14,17 +14,17 @@ class UpdateController extends BaseController
         /**
          * Find the contact by ID
          */
-        $contact = Event::where('id', $id)->get();
+        $event = Event::where('id', $id)->get();
 
-        if($contact && !is_null($contact->deleted_at)) { // als contact gedelete is, niet tonen
-            Session::set('error', 'Contact not found.');
+        if($event && !is_null($event->deleted_at)) { // als event gedelete is, niet tonen
+            Session::set('error', 'Event not found.');
             redirect('/');
         }
 
         /**
          * Load the view file
          */
-        view('update', compact('contact'));
+        view('update', compact('event'));
     }
 
 }

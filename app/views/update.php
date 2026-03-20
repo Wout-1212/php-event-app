@@ -1,7 +1,9 @@
 <?php Core\Core::header(); ?>
 
 <div class="">
-    <?php snippet('eventForm', $event); ?>
+    <?php snippet('form', [
+        'event' => $event,
+    ]); ?>
 </div>
 
 <?php Core\Core::footer(); ?>

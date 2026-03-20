@@ -32,6 +32,6 @@ class Savecontroller extends BaseController
         }
 
         Session::set('message', 'Event saved successfully');
-        redirect('/');
+        redirect('/admin');
     }
 }

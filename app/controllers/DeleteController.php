@@ -29,7 +29,7 @@ class DeleteController extends BaseController
          * Set a success message and redirect to the homepage
          */
         Session::set('msg', 'Contact deleted successfully.');
-        redirect('/');
+        redirect('/admin');
     }
 
 }

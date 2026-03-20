@@ -17,30 +17,36 @@
             <h1 class="layout__header-title">5 Latest Events</h1>
         </header>
 
-        <div class="table__wrapper">
-            <table class="table">
-                <thead class="table__header">
-                    <tr>
-                        <th class="table__header-cell">Title</th>
-                        <th class="table__header-cell">Description</th>
-                        <th class="table__header-cell">Location</th>
-                        <th class="table__header-cell">Date</th>
-                        <th class="table__header-cell">Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($events as $key => $event) : ?>
-                        <tr class="table__row">
-                            <td class="table__cell"><?= $event->title ?></td>
-                            <td class="table__cell"><?= $event->description ?></td>
-                            <td class="table__cell"><?= $event->location ?></td>
-                            <td class="table__cell"><?= $event->date ?></td>
-                            <td class="table__cell"><?= $event->time ?></td>
+        <?php if (!empty($events)): ?>
+            <div class="table__wrapper">
+                <table class="table">
+                    <thead class="table__header">
+                        <tr>
+                            <th class="table__header-cell">Title</th>
+                            <th class="table__header-cell">Description</th>
+                            <th class="table__header-cell">Location</th>
+                            <th class="table__header-cell">Date</th>
+                            <th class="table__header-cell">Time</th>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($events as $key => $event) : ?>
+                            <tr class="table__row">
+                                <td class="table__cell"><?= $event->title ?></td>
+                                <td class="table__cell"><?= $event->description ?></td>
+                                <td class="table__cell"><?= $event->location ?></td>
+                                <td class="table__cell"><?= $event->date ?></td>
+                                <td class="table__cell"><?= $event->time ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php else: ?>
+            <div class="message message--error">
+                No events found.
+            </div>
+        <?php endif; ?>
     </div>
 </body>
 
