@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Items</title>
-    <link href="./main.css" rel="stylesheet">
 </head>
 
 <body class="layout">
@@ -27,16 +26,23 @@
                             <th class="table__header-cell">Location</th>
                             <th class="table__header-cell">Date</th>
                             <th class="table__header-cell">Time</th>
+                            <th class="table__header-cell">Today</th>
+                            <th class="table__header-cell">Tomorrow</th>
+                            <th class="table__header-cell">Day after Tomorrow</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($events as $key => $event) : ?>
-                            <tr class="table__row">
+                            <tr class="table__row" data-location="<?= $event->location ?>">
                                 <td class="table__cell"><?= $event->title ?></td>
                                 <td class="table__cell"><?= $event->description ?></td>
                                 <td class="table__cell"><?= $event->location ?></td>
                                 <td class="table__cell"><?= $event->date ?></td>
                                 <td class="table__cell"><?= $event->time ?></td>
+                                <td class="table__cell day1"></td>
+                                <td class="table__cell day2"></td>
+                                <td class="table__cell day3"></td>
+
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

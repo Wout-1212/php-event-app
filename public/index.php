@@ -10,10 +10,7 @@ define('PUBLIC_PATH', __DIR__);
 
 Core::Init();
 
-// TODO: Remove this after implementing proper authentication
-if (!Session::get('user_id')) {
-    Session::set('user_id', 1);
-}
+
 
 $router = new Router();
 $router->add('/', 'HomeController', 'index');

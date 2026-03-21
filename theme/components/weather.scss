@@ -1,0 +1,27 @@
+.weather{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__icon {
+        font-size: 1.5rem;
+    }
+    &__temp {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .max-temp {
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        .min-temp {
+            color: var(--color-secondary);
+        }
+    }
+    &__error {
+        color: var(--color-error);
+        font-size: 1rem;
+    }
+}

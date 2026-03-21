@@ -17,7 +17,7 @@ class Savecontroller extends BaseController
             $event->location = get('location');
             $event->date = get('date');
             $event->time = get('time');
-            $event->user_id = Session::get('user_id');
+            $event->user_id = Session::get('user');
             $event->save();
         }
 
