@@ -57,7 +57,54 @@ async function getWeather(latitude, longitude, row) {
   }
 }
 
+function validateLogin() {
+  const form = document.querySelector(".login__wrapper");
+  if (!form) return;
+  const email = document.querySelector("#email");
+  const password = document.querySelector("#password");
+
+  form.addEventListener("submit", (e) => {
+    // vorige errors verwijderen
+    document.querySelectorAll(".login__error").forEach((el) => el.remove());
+    document
+      .querySelectorAll(".login__input--error")
+      .forEach((el) => el.classList.remove("login__input--error"));
+
+    let valid = true;
+
+    if (!email.value.trim()) {
+      showError(email, "Email is required.");
+      valid = false;
+    } else if (email.value.includes(" ")) {
+      showError(email, "Email cannot contain spaces.");
+      valid = false;
+    } else if (!email.value.includes("@") || !email.value.includes(".")) {
+      showError(email, "Please enter a valid email address.");
+      valid = false;
+    }
+
+    if (!password.value.trim()) {
+      showError(password, "Password is required.");
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault();
+    }
+  });
+}
+
+function showError(input, message) {
+  input.classList.add("login__input--error");
+  const error = document.createElement("span");
+  error.className = "login__error";
+  error.textContent = message;
+  input.insertAdjacentElement("afterend", error);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+  validateLogin();
+
   const rows = document.querySelectorAll(".table__row");
 
   for (const row of rows) {

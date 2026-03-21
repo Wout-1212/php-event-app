@@ -20,13 +20,13 @@
         <form action="/authenticate" method="POST">
             <div class="login__form-group">
                 <label for="email" class="login__label">Email</label>
-                <input type="email" id="email" name="email" required
+                <input type="text" id="email" name="email"
                     class="login__input">
             </div>
 
             <div class="login__form-group">
                 <label for="password" class="login__label">Password</label>
-                <input type="password" id="password" name="password" required
+                <input type="text" id="password" name="password"
                     class="login__input">
             </div>
 

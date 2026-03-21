@@ -13,7 +13,7 @@ class LoginController
         view('login');
     }
 
-    public function authenticate() // verificatie met custom javascript, tijdelijk
+    public function authenticate()
     {
         $email = get('email');
         $password = get('password');

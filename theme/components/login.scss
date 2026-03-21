@@ -52,6 +52,10 @@
       box-shadow: 0 0 0 2px var(--color-focus-ring);
       border-color: transparent;
     }
+
+    &--error {
+      border-color: var(--color-error);
+    }
   }
  
   &__button {
