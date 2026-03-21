@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\Contact;
 use App\Controllers\BaseController;
 use App\Models\Event;
 use Core\Session;

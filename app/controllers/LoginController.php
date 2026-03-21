@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
 
 use App\models\User;
 use Core\Auth;
@@ -29,7 +29,7 @@ class LoginController
         redirect('/login');
     }
 
-    public function Logout()
+    public function logout()
     {
         Session::destroy();
         redirect('/');

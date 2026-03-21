@@ -6,7 +6,7 @@ use Core\Session;
 use App\Models\Event;
 use App\Controllers\BaseController;
 
-class Savecontroller extends BaseController
+class SaveController extends BaseController
 {
     public function save(int $id = null)
     {

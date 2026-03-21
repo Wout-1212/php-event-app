@@ -19,16 +19,16 @@ class DeleteController extends BaseController
         }
 
         /**
-         * Find the contact by ID and delete it by giving it a date
+         * Find the event by ID and delete it by giving it a date
          */
-        $contact = Event::where('id', $id)->get();
-        $contact->deleted_at = date('Y-m-d H:i:s');
-        $contact->save();
+        $event = Event::where('id', $id)->get();
+        $event->deleted_at = date('Y-m-d H:i:s');
+        $event->save();
 
         /**
          * Set a success message and redirect to the homepage
          */
-        Session::set('msg', 'Contact deleted successfully.');
+        Session::set('msg', 'Event deleted successfully.');
         redirect('/admin');
     }
 
