@@ -21,10 +21,10 @@ Een webapplicatie voor het beheren van evenementen, gebouwd met een PHP MVC-fram
 ## Screenshots
 
 ### Homepage
-<img width="1870" alt="homepage" src="https://github.com/user-attachments/assets/9737e1f1-dbf4-4c30-8a66-2507810846e2" />
+![homepage](./screenshots/homepage.png)
 
 ### Admin dashboard
-<img width="1870" alt="admin dashboard" src="https://github.com/user-attachments/assets/1df8a19d-02d2-4d68-9c8a-238c293d3e70" />
+![admin-dashboard](./screenshots/admin-dashboard.png)
 
 ### Admin event editor
-<img width="1870" alt="event editor" src="https://github.com/user-attachments/assets/b02facc4-48c6-415a-b723-5e546ac9c86b" />
+![admin-event-editor](./screenshots/admin-event-editor.png)
